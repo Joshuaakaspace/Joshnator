@@ -5,8 +5,8 @@ with open('README.md', 'r') as file:
 
 
 setuptools.setup(
-	name = 'joshnator', #this should be unique
-	version = '0.0.2',
+	name = 'joshnator',
+	version = '0.0.3',
 	author = 'Joshua Nishanth',
 	author_email = 'joshuanishanth120@gmail.com',
 	description = 'data cleaning package',
