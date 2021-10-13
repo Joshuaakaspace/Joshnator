@@ -1,4 +1,4 @@
-from Swagclean import utils
+from joshnator import utils
 
 __version__ = '0.0.1'
 
