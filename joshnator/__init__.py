@@ -1,6 +1,6 @@
 from joshnator import utils
 
-__version__ = '0.0.3'
+__version__ = '0.0.4'
 
 def get_wordcounts(x):
 	return utils._get_wordcounts(x)
@@ -13,7 +13,6 @@ def get_avg_wordlength(x):
 
 def get_stopwords_counts(x):
 	return utils._get_stopwords_counts(x)
-
 
 def get_hashtag_counts(x):
 	return utils._get_hashtag_counts(x)
@@ -54,7 +53,6 @@ def remove_html_tags(x):
 def remove_accented_chars(x):
 	return utils._remove_accented_chars(x)
 
-
 def remove_stopwords(x):
 	return utils._remove_stopwords(x)
 
@@ -62,6 +60,9 @@ def make_base(x):
 	return utils._make_base(x)
 
 def get_value_counts(df, col):
+	return utils._get_value_counts(df, col)
+
+def get_word_freqs(df, col):
 	return utils._get_value_counts(df, col)
 
 def remove_common_words(x, freq, n=20):
@@ -73,3 +74,11 @@ def remove_rarewords(x, freq, n=20):
 def spelling_correction(x):
 	return utils._spelling_correction(x)
 
+def remove_dups_char(x):
+	return utils._remove_dups_char(x)
+
+def get_basic_features(df):
+	return utils._get_basic_features(df)
+
+def get_ngram(df, col, ngram_range):
+	return utils._get_ngram(df, col, ngram_range)
