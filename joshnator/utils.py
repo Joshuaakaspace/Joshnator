@@ -52,18 +52,18 @@ def _get_digit_counts(x):
 def _get_uppercase_counts(x):
 	return len([t for t in x.split() if t.isupper()])
 
-def _cont_exp(x):
-	abbreviations = json.load(open(abbreviations_path))
+#def _cont_exp(x):
+	#abbreviations = json.load(open(abbreviations_path))
 
-	if type(x) is str:
-		for key in abbreviations:
-			value = abbreviations[key]
-			raw_text = r'\b' + key + r'\b'
-			x = re.sub(raw_text, value, x)
+	#if type(x) is str:
+		#for key in abbreviations:
+			#value = abbreviations[key]
+			#raw_text = r'\b' + key + r'\b'
+			#x = re.sub(raw_text, value, x)
 			# print(raw_text,value, x)
-		return x
-	else:
-		return x
+		#return x
+	#else:
+		#return x
 
 
 def _get_emails(x):
