@@ -7,7 +7,7 @@ def get_wordcounts(x):
 	return utils._get_wordcounts(x)
 
 def get_sentence_stop(x):
-	return utils._get_sentence_stops(x)
+	return utils._get_sentence_stop(x)
 	
 
 def get_charcounts(x):
