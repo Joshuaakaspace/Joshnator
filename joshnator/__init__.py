@@ -1,11 +1,14 @@
 from joshnator import utils
-from .utils import _clean_sentence_with_stop_words as sentence_with_stop_words
 
 
 __version__ = '0.0.4'
 
 def get_wordcounts(x):
 	return utils._get_wordcounts(x)
+
+def get_sentence_stop(x):
+	return utils._clean_sentence_with_stop_words(x)
+	
 
 def get_charcounts(x):
 	return utils._get_charcounts(x)
