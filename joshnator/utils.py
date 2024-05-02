@@ -11,6 +11,8 @@ from bs4 import BeautifulSoup
 import unicodedata
 from textblob import TextBlob
 import en_core_web_sm
+import string
+from nltk.corpus import stopwords
 
 from sklearn.feature_extraction.text import CountVectorizer
 
@@ -163,4 +165,9 @@ def _get_ngram(df, col, ngram_range):
 	ngram = sorted(ngram.items(), key = lambda x: x[1], reverse=True)
 
 	return ngram
-
+def _clean_sentence_with_stop_words(title):
+    title = ''.join([char for char in title if char not in string.punctuation])
+    title = ''.join([char for char in title if not char.isdigit()])
+    stop_words = set(stopwords.words('english'))
+    title = ' '.join([word for word in title.split() if word.lower() not in stop_words])
+    return title.strip()
