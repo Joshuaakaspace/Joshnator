@@ -1,4 +1,6 @@
 from joshnator import utils
+from .utils import _clean_sentence_with_stop_words as sentence_with_stop_words
+
 
 __version__ = '0.0.4'
 
