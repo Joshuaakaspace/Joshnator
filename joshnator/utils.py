@@ -31,7 +31,7 @@ def _get_charcounts(x):
 	x = ''.join(s)
 	return len(x)
 
-def _get_sentence_stop(x):
+def _get_sentencestop(x):
     x = ''.join([char for char in x if char not in string.punctuation])
     x = ''.join([char for char in x if not char.isdigit()])
     stop_words = set(stopwords.words('english'))
