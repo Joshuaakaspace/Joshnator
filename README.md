@@ -6,9 +6,18 @@ Install
 
 `pip install git+ssh://git@github.com/Joshuaakaspace/joshnator.git`
 
+Please install these dependencies
+        'pandas',
+        'numpy',
+        'nltk',
+        'spacy',
+        'textblob',
+        'beautifulsoup4'
+
 Uninstall
 
 `pip uninstall joshnator`
+
 
 
 For shortcut functions to clean your data, kindly use the below code:
