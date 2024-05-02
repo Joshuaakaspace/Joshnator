@@ -6,8 +6,8 @@ __version__ = '0.0.4'
 def get_wordcounts(x):
 	return utils._get_wordcounts(x)
 
-def get_sentence_stop(x):
-	return utils._get_sentence_stop(x)
+def get_sentencestop(x):
+	return utils._get_sentencestop(x)
 	
 
 def get_charcounts(x):
