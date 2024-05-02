@@ -31,6 +31,14 @@ def _get_charcounts(x):
 	x = ''.join(s)
 	return len(x)
 
+def _get_sentence_stop(x):
+    x = ''.join([char for char in x if char not in string.punctuation])
+    x = ''.join([char for char in x if not char.isdigit()])
+    stop_words = set(stopwords.words('english'))
+    x = ' '.join([word for word in x.split() if word.lower() not in stop_words])
+    return x.strip()
+
+
 def _get_avg_wordlength(x):
 	count = _get_charcounts(x)/_get_wordcounts(x)
 	return count
@@ -165,9 +173,3 @@ def _get_ngram(df, col, ngram_range):
 	ngram = sorted(ngram.items(), key = lambda x: x[1], reverse=True)
 
 	return ngram
-def _get_sentence_stop(x):
-    x = ''.join([char for char in x if char not in string.punctuation])
-    x = ''.join([char for char in x if not char.isdigit()])
-    stop_words = set(stopwords.words('english'))
-    x = ' '.join([word for word in x.split() if word.lower() not in stop_words])
-    return x.strip()
