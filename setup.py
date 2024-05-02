@@ -20,8 +20,12 @@ setuptools.setup(
     ],
     python_requires='>=3.5',
     install_requires=[
-        'pandas>=1.0',
-        'numpy>=1.15',
-    ]
+        'pandas',
+        'numpy',
+        'nltk',
+        'spacy',
+        'textblob',
+        'beautifulsoup4'
+    ],
 )
 
